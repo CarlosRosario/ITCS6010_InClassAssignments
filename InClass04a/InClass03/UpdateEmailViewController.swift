@@ -11,6 +11,8 @@ import UIKit
 class UpdateEmailViewController: UIViewController {
 
     var user: User! = nil
+    
+    weak var writeDataDelegate: writeValueBackDelegate?
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -25,32 +27,13 @@ class UpdateEmailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func updateEmail(sender: UIButton) {
-    }
-    
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        
         if ((emailTextField.text?.isEmpty) != nil){
             // don't do anything in this case - user did not enter anything for the name
             user.email = emailTextField.text!
-            return true
+            writeDataDelegate?.writeValueBack("email", value: user.email)
         }
-        else {
-            //            user.name = nameTextField.text!
-            return true
-        }
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destinationvc = segue.destinationViewController
-        if let profilevc = destinationvc as? ProfileViewController{
-            if let identifier = segue.identifier{
-                switch identifier {
-                case "EmailUnwindSegue":
-                    profilevc.user = user
-                default: break
-                }
-            }
-        }
+        self.dismissViewControllerAnimated(true) {}
     }
 }

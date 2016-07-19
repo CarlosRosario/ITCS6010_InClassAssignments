@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, writeValueBackDelegate {
 
     var user : User! = nil
     
@@ -66,6 +66,7 @@ class ProfileViewController: UIViewController {
                 switch identifier {
                 case "GoToUpdateNameSegue":
                     updatenamevc.user = user
+                    updatenamevc.writeDataDelegate = self
                 default: break
                 }
             }
@@ -75,6 +76,7 @@ class ProfileViewController: UIViewController {
                 switch identifier {
                 case "GoToUpdateEmail":
                     updateemailvc.user = user
+                    updateemailvc.writeDataDelegate = self
                 default: break
                 }
             }
@@ -85,6 +87,7 @@ class ProfileViewController: UIViewController {
                 switch identifier {
                 case "GoToUpdatePasswordSegue":
                     updatepasswordvc.user = user
+                    updatepasswordvc.writeDataDelegate = self
                 default: break
                 }
             }
@@ -95,38 +98,33 @@ class ProfileViewController: UIViewController {
                 switch identifier {
                 case "GoToUpdateDepartmentSegue":
                     updatedepartmentvc.user = user
+                    updatedepartmentvc.writeDataDelegate = self
                 default: break
                 }
             }
         }
     }
     
-    @IBAction func unwindToProfileVC(segue: UIStoryboardSegue){
-        
-        if let identifier = segue.identifier{
-            switch identifier{
-                case "NameUnwindSegue":
-                nameTextField.text = user.name
-                case "EmailUnwindSegue":
-                emailTextField.text = user.email
-                case "PasswordUnwindSegue":
-                passwordTextField.text = user.password
-                
-                asterisks = ""
-                for _ in 1...user.password.characters.count {
-                    asterisks += "*"
-                }
-                
-                togglePasswordButton.setTitle("Hide", forState: .Normal)
-                isPasswordShowing = true
-
-
-                
-                
-                case "DepartmentUnwindSegue":
-                departmentTextField.text = user.department
-            default: break
+    
+    func writeValueBack(parameterUpdated: String, value: String){
+        switch(parameterUpdated){
+            case "name":
+            nameTextField.text = value
+            case "email":
+            emailTextField.text = value
+            case "password":
+            passwordTextField.text = value
+            asterisks = ""
+            for _ in 1...user.password.characters.count {
+                asterisks += "*"
             }
+            
+            togglePasswordButton.setTitle("Hide", forState: .Normal)
+            isPasswordShowing = true
+            case "department":
+            departmentTextField.text = value
+
+        default: break
         }
     }
 }

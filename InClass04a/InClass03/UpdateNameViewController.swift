@@ -12,6 +12,8 @@ class UpdateNameViewController: UIViewController {
 
     var user: User! = nil
     
+    weak var writeDataDelegate: writeValueBackDelegate?
+    
     @IBOutlet weak var nameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,31 +27,12 @@ class UpdateNameViewController: UIViewController {
     }
     
     @IBAction func updateName(sender: UIButton) {
-    }
-    
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        
         if ((nameTextField.text?.isEmpty) != nil){
             // don't do anything in this case - user did not enter anything for the name
             user.name = nameTextField.text!
-            return true
+            writeDataDelegate?.writeValueBack("name", value: user.name)
         }
-        else {
-//            user.name = nameTextField.text!
-            return true
-        }
+        self.dismissViewControllerAnimated(true, completion:{})
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destinationvc = segue.destinationViewController
-        if let profilevc = destinationvc as? ProfileViewController{
-            if let identifier = segue.identifier{
-                switch identifier {
-                case "NameUnwindSegue":
-                    profilevc.user = user
-                default: break
-                }
-            }
-        }
-    }
-    
 }

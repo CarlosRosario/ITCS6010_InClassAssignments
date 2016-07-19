@@ -9,7 +9,7 @@
         <!--Home-->
         <scene sceneID="nfE-a0-msO">
             <objects>
-                <viewController id="4mZ-mk-LY3" customClass="HomeViewController" customModule="InClass03" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4mZ-mk-LY3" customClass="HomeViewController" customModule="InClass04" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Fm-MY-ETe"/>
                         <viewControllerLayoutGuide type="bottom" id="Doo-nC-KSE"/>
@@ -72,13 +72,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aDo-Eh-fZY">
                                         <rect key="frame" x="0.0" y="174" width="535" height="56"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Department" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQo-ot-gLR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Department" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQo-ot-gLR">
                                                 <rect key="frame" x="0.0" y="0.0" width="535" height="18"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="QR6-bf-ILv">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="QR6-bf-ILv">
                                                 <rect key="frame" x="0.0" y="28" width="535" height="29"/>
                                                 <segments>
                                                     <segment title="CS"/>
@@ -122,7 +122,7 @@
         <!--Update Name View Controller-->
         <scene sceneID="ILp-08-Q4N">
             <objects>
-                <viewController id="CPl-nT-ySs" customClass="UpdateNameViewController" customModule="InClass03" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CPl-nT-ySs" customClass="UpdateNameViewController" customModule="InClass04" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Daq-nm-tHB"/>
                         <viewControllerLayoutGuide type="bottom" id="pV2-Aq-Ksw"/>
@@ -165,7 +165,7 @@
         <!--Update Email View Controller-->
         <scene sceneID="dVF-97-brf">
             <objects>
-                <viewController id="xfn-zH-OlD" customClass="UpdateEmailViewController" customModule="InClass03" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xfn-zH-OlD" customClass="UpdateEmailViewController" customModule="InClass04" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Iwx-X7-bn6"/>
                         <viewControllerLayoutGuide type="bottom" id="AK6-dz-uBq"/>
@@ -208,7 +208,7 @@
         <!--Update Password View Controller-->
         <scene sceneID="vYd-Mb-b4n">
             <objects>
-                <viewController id="2Pu-y2-o81" customClass="UpdatePasswordViewController" customModule="InClass03" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Pu-y2-o81" customClass="UpdatePasswordViewController" customModule="InClass04" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QPj-MH-aMb"/>
                         <viewControllerLayoutGuide type="bottom" id="jEN-MT-mzS"/>
@@ -221,6 +221,7 @@
                                 <rect key="frame" x="28" y="104" width="51" height="30"/>
                                 <state key="normal" title="Update"/>
                                 <connections>
+                                    <action selector="updateEmailAction:" destination="2Pu-y2-o81" eventType="touchUpInside" id="erO-fK-eb4"/>
                                     <segue destination="mbE-6f-xAD" kind="unwind" identifier="PasswordUnwindSegue" unwindAction="unwindToProfileVC:" id="fIy-a0-di4"/>
                                 </connections>
                             </button>
@@ -250,7 +251,7 @@
         <!--Update Department View Controller-->
         <scene sceneID="J7J-at-StP">
             <objects>
-                <viewController id="70x-GH-c2F" customClass="UpdateDepartmentViewController" customModule="InClass03" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="70x-GH-c2F" customClass="UpdateDepartmentViewController" customModule="InClass04" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2ql-95-Laj"/>
                         <viewControllerLayoutGuide type="bottom" id="Pg0-pY-bFu"/>
@@ -280,6 +281,7 @@
                                 <rect key="frame" x="152" y="107" width="51" height="30"/>
                                 <state key="normal" title="Update"/>
                                 <connections>
+                                    <action selector="updateDepartment:" destination="70x-GH-c2F" eventType="touchUpInside" id="dli-dB-Iac"/>
                                     <segue destination="dWc-jF-uqU" kind="unwind" identifier="DepartmentUnwindSegue" unwindAction="unwindToProfileVC:" id="fTe-mR-gho"/>
                                 </connections>
                             </button>
@@ -298,7 +300,7 @@
         <!--Profile-->
         <scene sceneID="XHm-Zg-ejg">
             <objects>
-                <viewController title="Profile" id="pso-6F-Hz3" customClass="ProfileViewController" customModule="InClass03" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="pso-6F-Hz3" customClass="ProfileViewController" customModule="InClass04" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Roq-j0-7rB"/>
                         <viewControllerLayoutGuide type="bottom" id="ZGy-A2-oBR"/>

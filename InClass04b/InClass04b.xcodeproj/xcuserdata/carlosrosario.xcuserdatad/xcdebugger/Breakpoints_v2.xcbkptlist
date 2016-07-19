@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "InClass03/UpdateNameViewController.swift"
-            timestampString = "490059900.696507"
+            filePath = "InClass04b/ViewController.swift"
+            timestampString = "490230620.013392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "shouldPerformSegueWithIdentifier(_:sender:)"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "fetchImage()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

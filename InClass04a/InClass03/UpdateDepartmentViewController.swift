@@ -12,6 +12,8 @@ class UpdateDepartmentViewController: UIViewController {
     
     var user: User! = nil
     var department: String! = nil
+    weak var writeDataDelegate: writeValueBackDelegate?
+    
     @IBOutlet weak var departmentSegmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
@@ -33,6 +35,13 @@ class UpdateDepartmentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func updateDepartment(sender: UIButton) {
+        if (!department.isEmpty){
+            user.department = department
+            writeDataDelegate?.writeValueBack("department", value: user.department)
+        }
+        self.dismissViewControllerAnimated(true, completion: {})
+    }
     
     @IBAction func departmentSelected(sender: UISegmentedControl) {
         
@@ -50,29 +59,4 @@ class UpdateDepartmentViewController: UIViewController {
         default: break
         }
     }
-    
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        if (!department.isEmpty){
-            user.department = department
-            return true
-        }
-        else {
-            //            user.name = nameTextField.text!
-            return true
-        }
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destinationvc = segue.destinationViewController
-        if let profilevc = destinationvc as? ProfileViewController{
-            if let identifier = segue.identifier{
-                switch identifier {
-                case "DepartmentUnwindSegue":
-                    profilevc.user = user
-                default: break
-                }
-            }
-        }
-    }
-
 }

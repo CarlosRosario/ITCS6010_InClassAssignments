@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810BCC7A1D3838A900EE180D /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810BCC791D3838A900EE180D /* Protocol.swift */; };
 		81BE0C1A1D35979B002A9573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BE0C191D35979B002A9573 /* AppDelegate.swift */; };
 		81BE0C1F1D35979B002A9573 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BE0C1D1D35979B002A9573 /* Main.storyboard */; };
 		81BE0C211D35979B002A9573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BE0C201D35979B002A9573 /* Assets.xcassets */; };
@@ -21,7 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		81BE0C161D35979B002A9573 /* InClass03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InClass03.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		810BCC791D3838A900EE180D /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		81BE0C161D35979B002A9573 /* InClass04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InClass04.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BE0C191D35979B002A9573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81BE0C1E1D35979B002A9573 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81BE0C201D35979B002A9573 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,7 +60,7 @@
 		81BE0C171D35979B002A9573 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81BE0C161D35979B002A9573 /* InClass03.app */,
+				81BE0C161D35979B002A9573 /* InClass04.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +71,7 @@
 				81BE0C2C1D359806002A9573 /* HomeViewController.swift */,
 				81BE0C2E1D359906002A9573 /* ProfileViewController.swift */,
 				81BE0C321D35B3C8002A9573 /* UpdateNameViewController.swift */,
+				810BCC791D3838A900EE180D /* Protocol.swift */,
 				81BE0C341D35B909002A9573 /* UpdateEmailViewController.swift */,
 				81BE0C361D35BBE3002A9573 /* UpdatePasswordViewController.swift */,
 				81BE0C381D35BDA7002A9573 /* UpdateDepartmentViewController.swift */,
@@ -93,9 +96,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81BE0C151D35979B002A9573 /* InClass03 */ = {
+		81BE0C151D35979B002A9573 /* InClass04 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81BE0C281D35979B002A9573 /* Build configuration list for PBXNativeTarget "InClass03" */;
+			buildConfigurationList = 81BE0C281D35979B002A9573 /* Build configuration list for PBXNativeTarget "InClass04" */;
 			buildPhases = (
 				81BE0C121D35979B002A9573 /* Sources */,
 				81BE0C131D35979B002A9573 /* Frameworks */,
@@ -105,9 +108,9 @@
 			);
 			dependencies = (
 			);
-			name = InClass03;
+			name = InClass04;
 			productName = InClass03;
-			productReference = 81BE0C161D35979B002A9573 /* InClass03.app */;
+			productReference = 81BE0C161D35979B002A9573 /* InClass04.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +128,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 81BE0C111D35979B002A9573 /* Build configuration list for PBXProject "InClass03" */;
+			buildConfigurationList = 81BE0C111D35979B002A9573 /* Build configuration list for PBXProject "InClass04" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -138,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81BE0C151D35979B002A9573 /* InClass03 */,
+				81BE0C151D35979B002A9573 /* InClass04 */,
 			);
 		};
 /* End PBXProject section */
@@ -166,6 +169,7 @@
 				81BE0C351D35B909002A9573 /* UpdateEmailViewController.swift in Sources */,
 				81BE0C1A1D35979B002A9573 /* AppDelegate.swift in Sources */,
 				81BE0C371D35BBE3002A9573 /* UpdatePasswordViewController.swift in Sources */,
+				810BCC7A1D3838A900EE180D /* Protocol.swift in Sources */,
 				81BE0C391D35BDA7002A9573 /* UpdateDepartmentViewController.swift in Sources */,
 				81BE0C331D35B3C8002A9573 /* UpdateNameViewController.swift in Sources */,
 				81BE0C2D1D359806002A9573 /* HomeViewController.swift in Sources */,
@@ -286,7 +290,7 @@
 				INFOPLIST_FILE = InClass03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ITCS6010.rosario.InClass03;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = InClass04;
 			};
 			name = Debug;
 		};
@@ -297,14 +301,14 @@
 				INFOPLIST_FILE = InClass03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ITCS6010.rosario.InClass03;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = InClass04;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81BE0C111D35979B002A9573 /* Build configuration list for PBXProject "InClass03" */ = {
+		81BE0C111D35979B002A9573 /* Build configuration list for PBXProject "InClass04" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81BE0C261D35979B002A9573 /* Debug */,
@@ -313,13 +317,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81BE0C281D35979B002A9573 /* Build configuration list for PBXNativeTarget "InClass03" */ = {
+		81BE0C281D35979B002A9573 /* Build configuration list for PBXNativeTarget "InClass04" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81BE0C291D35979B002A9573 /* Debug */,
 				81BE0C2A1D35979B002A9573 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -96,8 +96,6 @@ class HomeViewController: UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    
-    
     @IBAction func departmentSelected(sender: UISegmentedControl) {
         
         switch sender.selectedSegmentIndex{
